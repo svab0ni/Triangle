@@ -16,6 +16,32 @@ namespace TriangleHomework
                 return "Wrong length of sides";
             }
 
+            //Checking triangle ineqaulity. 
+            //can we actually form triangle with the given sides.
+            if (a + b <= c || b + c <= a || a + c <= b)
+            {
+                return "Impossible to form Triangle with given sides";
+            }
+
+            //Checking if triangle is equlateral (if all sides are equal)
+            if (a == b && b == c)
+            {
+                return "Triangle is Equilateral";
+            }
+            
+            //Checking if triangle is isosclaes (if two sides are equal)
+            if (a == b || b == c || a == c)
+            {
+                return "Triangle is Isoscales";
+            }
+
+            //if triangle sides passed all criterias and 
+            //if triangle is neither of the types listed before it is scalene
+            return "Triangle is Scalene";
+        }
+
+        public string triangleTypeByAngle(int a, int b, int c)
+        {
             return "";
         }
     }
