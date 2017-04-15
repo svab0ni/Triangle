@@ -41,5 +41,26 @@ namespace TriangleUnitTest
             Triangle obj = new Triangle();
             Assert.AreEqual("Triangle is Scalene", obj.triangleType(3,4,5));
         }
+
+        [TestMethod]
+        public void acuteTriangle()
+        {
+            Triangle obj = new Triangle();
+            Assert.AreEqual("Triangle is acute", obj.triangleTypeByAngle(5, 5, 5));
+        }
+
+        [TestMethod]
+        public void rightTriangle()
+        {
+            Triangle obj = new Triangle();
+            Assert.AreEqual("Triangle is right", obj.triangleTypeByAngle(3, 4, 5));
+        }
+
+        [TestMethod]
+        public void obtuseTriangle()
+        {
+            Triangle obj = new Triangle();
+            Assert.AreEqual("Triangle is obtuse", obj.triangleTypeByAngle(5, 10, 14));
+        }
     }
 }
